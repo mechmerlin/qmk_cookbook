@@ -2,4 +2,4 @@
 # Cookbook:: qmk_cookbook
 # Recipe:: default
 #
-# Copyright:: 2018, The Authors, All Rights Reserved.
+# Copyright:: 2018, MechMerlin, All Rights Reserved.
