@@ -15,7 +15,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[qmk::default]
+    - recipe[qmk::default]
     verifier:
       controls:
       - packages
