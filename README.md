@@ -1,4 +1,4 @@
 # qmk_cookbook
 
-TODO: Enter the cookbook description here.
+Chef cookbook used to provision a QMK dev machine. 
 
