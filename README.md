@@ -15,11 +15,11 @@
     ```
 
     You should see output siilar to the following
-
-    ```
+ ```
     Instance             Driver   Provisioner  Verifier  Transport  Last Action  Last Error
 default-ubuntu-1604  Vagrant  ChefSolo     Inspec    Ssh        Converged    <None>
-    ```
+
+```
 
 4. Converge the selected instance.
 
