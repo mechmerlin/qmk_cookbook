@@ -3,3 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2018, MechMerlin, All Rights Reserved.
+
+include_recipe 'qmk::users'
+include_recipe 'qmk::directories'
+include_recipe 'qmk::firmware'
