@@ -1,6 +1,6 @@
 title 'packages'
 
-packages = ['build_essential', 'gcc', 'unzip', 'wget', 'zip', 'gcc-avr', 'binutils-avr', 'avr-libc', 'dfu-programmer', 'dfu-util', 'gcc-arm-none-eabi', 'binutils-arm-none-eabi', 'libnewlib-arm-none-eabi', 'git', 'diffutils']
+packages = ['gcc', 'unzip', 'wget', 'zip', 'gcc-avr', 'binutils-avr', 'avr-libc', 'dfu-programmer', 'dfu-util', 'gcc-arm-none-eabi', 'binutils-arm-none-eabi', 'libnewlib-arm-none-eabi', 'git', 'diffutils']
 
 control 'packages' do
   title 'what packages are installed'
