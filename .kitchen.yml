@@ -11,6 +11,10 @@ verifier:
 
 platforms:
   - name: ubuntu-16.04
+    driver:
+      box: bento/ubuntu-16.04
+      box_url: https://vagrantcloud.com/bento/ubuntu-16.04
+      box_check_update: true
 
 suites:
   - name: default
