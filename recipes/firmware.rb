@@ -20,7 +20,6 @@ git 'clone qmk_firmware fork from github' do
   repository "git://github.com/#{github_user}/qmk_firmware.git"
   reference 'master'
   destination dest
-  user user
   action :checkout
 end
 
