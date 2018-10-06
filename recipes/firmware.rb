@@ -6,9 +6,13 @@ users_dir = if platform?('mac_os_x')
               '/home'
             end
 
-directory ::File.join(users_dir, user, 'Documents', 'qmk_firmware')
+qmk_fw_dir = ::File.join(users_dir, user, 'Documents', 'qmk_firmware')
 
-dest = ::File.join(users_dir, user, 'Documents/qmk_firmware')
+directory qmk_fw_dir do
+  owner user
+  mode '0755'
+  action :create
+end
 
 github_user = if node['qmk']['github_user'].empty?
                 'qmk'
@@ -19,11 +23,11 @@ github_user = if node['qmk']['github_user'].empty?
 git 'clone qmk_firmware fork from github' do
   repository "git://github.com/#{github_user}/qmk_firmware.git"
   reference 'master'
-  destination dest
-  action :checkout
+  destination qmk_fw_dir
+  action :sync
 end
 
 execute 'install dependencies' do
-  cwd ::File.join(dest, 'util')
+  cwd ::File.join(qmk_fw_dir, 'util')
   command './qmk_install.sh'
 end
