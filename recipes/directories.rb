@@ -6,4 +6,8 @@ users_dir = if platform?('mac_os_x')
               '/home'
             end
 
-directory ::File.join(users_dir, user, 'Documents')
+directory ::File.join(users_dir, user, 'Documents') do
+  owner user
+  mode '0755'
+  action :create
+end
