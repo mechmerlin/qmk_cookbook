@@ -14,7 +14,8 @@ else
     manage_home true
     gid 'sudo'
     home "/home/#{user_name}"
+    shell '/bin/bash'
     action :create
-    password passwd
+    password '$1$5o8FPo4C$5kFNhdltQ84.gKBkPir/l/'
   end
 end
