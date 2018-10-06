@@ -44,7 +44,9 @@ Create users.
 
 2. Install [ChefDK](https://downloads.chef.io/chefdk/3.3.23).
 
-3. On your terminal, examine the list of test kitchens that can be run by typing:
+3. Download/Clone this repo and `cd` into it. 
+
+4. On your terminal, examine the list of test kitchens that can be run by typing:
 
     ```
     kitchen list
@@ -57,13 +59,13 @@ default-ubuntu-1604  Vagrant  ChefSolo     Inspec    Ssh        Converged    <No
 
 ```
 
-4. Converge the selected instance by typing:
+5. Converge the selected instance by typing:
 
     ```
     kitchen converge default-ubuntu-1604
     ```
 You may replace `default-ubuntu-1604` with your target. 
 
-5. This should result in a VM with your selected user created and `qmk_firmware` downloaded. 
+6. This should result in a VM with your selected user created and `qmk_firmware` downloaded. 
 
 
