@@ -68,4 +68,8 @@ You may replace `default-ubuntu-1604` with your target.
 
 6. This should result in a VM with your selected user created and `qmk_firmware` downloaded. 
 
+7. Run a `kitchen verify` command to check that all packages have been installed correctly.
+
+8. Run a `kitchen login` command to log into the `VM` and be sure to `ssh username@localhost`, in this case the username should be mechmerlin. 
+
 
