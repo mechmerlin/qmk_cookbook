@@ -1,4 +1,4 @@
-user = node['qmk']['admin_user']
+user = 'vagrant'
 
 users_dir = if platform?('mac_os_x')
               '/Users'
@@ -27,7 +27,8 @@ git 'clone qmk_firmware fork from github' do
   action :sync
 end
 
-execute 'install dependencies' do
-  cwd ::File.join(qmk_fw_dir, 'util')
-  command './qmk_install.sh'
+apt_pkgs = node['qmk']['ubuntu_pkgs']
+
+apt_pkgs.each do |package|
+  apt_package package
 end
