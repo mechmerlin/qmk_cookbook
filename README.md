@@ -14,9 +14,9 @@
 
 ## Attributes
 
-- `default['qmk']['admin_user'] = 'mechmerlin'`
-- `default['qmk']['admin_passwd'] = 'password'`
-- `default['qmk']['github_user'] = 'mechmerlin'`
+- `default['qmk']['admin_user'] = 'vagrant'`
+- `default['qmk']['admin_passwd'] = 'vagrant'`
+- `default['qmk']['github_user'] = 'qmk'`
 
 ## Recipes
 
@@ -70,6 +70,6 @@ You may replace `default-ubuntu-1604` with your target.
 
 7. Run a `kitchen verify` command to check that all packages have been installed correctly.
 
-8. Run a `kitchen login` command to log into the `VM` and be sure to `ssh username@localhost`, in this case the username should be mechmerlin. The other option is to open up virtualbox and open up the newly created instance and run Ubuntu in a VM. 
+8. Run a `kitchen login` command to log into the `VM` and be sure to `ssh username@localhost`, in this case the username should be `vagrant`. The other option is to open up virtualbox and open up the newly created instance and run Ubuntu in a VM. 
 
 

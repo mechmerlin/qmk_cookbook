@@ -1,4 +1,4 @@
-user = node['qmk']['admin_user']
+user = 'vagrant'
 
 users_dir = if platform?('mac_os_x')
               '/Users'

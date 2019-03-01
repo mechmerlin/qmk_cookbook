@@ -2,7 +2,13 @@
 
 This file is used to list changes made in each version of the qmk_cookbook cookbook.
 
-## [0.2.0] - TBD
+## [0.2.1] - 2019-03-01
+
+## Fixed
+- Change login user to `vagrant` to make it easier to create firmware files without logging into another user. 
+- Get rid of execute statement to run `qmk_install.sh` and just use `apt_package` resource. 
+
+## [0.2.0] - 2019-02-10
 
 ### Added
 - `users` recipe for creating an ubuntu user.
