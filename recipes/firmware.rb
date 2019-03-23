@@ -31,7 +31,7 @@ git 'clone qmk_firmware fork from github' do
   action :sync
 end
 
-apt_pkgs = node['qmk']['ubuntu_pkgs']
+apt_pkgs = node['qmk']['firmware']['ubuntu_pkgs']
 
 apt_pkgs.each do |package|
   apt_package package
