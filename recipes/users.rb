@@ -1,7 +1,7 @@
 user_name = node['qmk']['admin_user']
 passwd = node['qmk']['admin_passwd']
 
-if platform?('mac_os_x')
+if mac_os_x?
   macos_user "create admin user #{user_name}" do
     username user_name
     autologin true
