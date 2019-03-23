@@ -9,3 +9,7 @@ chef_version '>= 14.0' if respond_to?(:chef_version)
 
 issues_url 'https://github.com/mechmerlin/qmk_cookbook/issues'
 source_url 'https://github.com/mechmerlin/qmk_cookbook'
+
+supports 'ubuntu', '= 16.04'
+
+depends 'chef-sugar'
