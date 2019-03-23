@@ -1,12 +1,10 @@
-user = 'vagrant'
 
-users_dir = if platform?('mac_os_x')
-              '/Users'
-            else
-              '/home'
-            end
-
-qmk_fw_dir = ::File.join(users_dir, user, 'Documents', 'qmk_firmware')
+install_dir = node['qmk']['install_location']
+user = node['qmk']['admin_user']
+user_dir = mac_os_x? ? '/Users' : '/home'
+user_home = ::File.join(user_dir, user)
+install_location = ::File.join(user_home, install_dir)
+qmk_fw_dir = ::File.join(install_location, 'qmk_firmware')
 
 directory qmk_fw_dir do
   owner user
