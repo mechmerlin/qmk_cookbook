@@ -6,6 +6,12 @@ user_home = ::File.join(user_dir, user)
 install_location = ::File.join(user_home, install_dir)
 qmk_fw_dir = ::File.join(install_location, 'qmk_firmware')
 
+directory ::File.join(install_location) do
+  owner user
+  mode '0755'
+  action :create
+end
+
 directory qmk_fw_dir do
   owner user
   mode '0755'
