@@ -6,7 +6,8 @@ This file is used to list changes made in each version of the qmk_cookbook cookb
 
 ### Added
 - Added dependency on `chef-sugar`.
-- Added new attribute for install location/ 
+- Added new attribute for install location.
+- Added new recipe for `qmk_configurator`.
 
 ### Changed
 - Change some if-else statements to ternary statements. 
