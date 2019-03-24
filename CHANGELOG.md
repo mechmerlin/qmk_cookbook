@@ -5,6 +5,7 @@ This file is used to list changes made in each version of the qmk_cookbook cookb
 ## [0.3.0] - 2019-03-23
 
 ### Added
+- Introduce new resource called `qmk_repo` to assist in repo cloning. 
 - Added dependency on `chef-sugar`.
 - Added new attribute for install location.
 - Added new recipe for `qmk_configurator`.
