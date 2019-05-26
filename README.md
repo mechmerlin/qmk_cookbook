@@ -42,7 +42,7 @@ Create users.
 
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) on your system. 
 
-2. Install [ChefDK](https://downloads.chef.io/chefdk/3.3.23).
+2. Install [Chef Workstation](https://downloads.chef.io/chef-workstation/0.2.53).
 
 3. Download/Clone this repo and `cd` into it. 
 
