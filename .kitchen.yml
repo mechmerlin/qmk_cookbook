@@ -27,3 +27,4 @@ suites:
     verifier:
       controls:
       - packages
+      - firmware-existence
