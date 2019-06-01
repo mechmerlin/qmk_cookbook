@@ -15,18 +15,24 @@ action_class do
   end
 
   def install_dir
-    new_resource.property_is_set?(:install_dir) ? new_resource.install_dir : 'Documents'
+    new_resource.property_is_set?(:install_dir) ? new_resource.install_dir : ''
   end
 end
 
 action :create do
-  directory ::File.join(install_dir)
-  directory ::File.join(install_dir, repo_name)
-
   git "clone #{repo_name} fork from github" do
     repository "git://github.com/#{github_user}/#{repo_name}.git"
     reference 'master'
     destination install_dir
     action :sync
+  end
+
+  if repo_name.eql? 'qmk_firmware'
+
+    apt_pkgs = node['qmk']['firmware']['ubuntu_pkgs']
+
+    apt_pkgs.each do |package|
+      apt_package package
+    end
   end
 end
