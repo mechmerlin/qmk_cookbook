@@ -1,8 +1,9 @@
 default['qmk']['admin_user'] = 'vagrant'
 default['qmk']['admin_passwd'] = 'vagrant'
 default['qmk']['github_user'] = 'qmk'
+default['qmk']['install_location'] = 'Documents'
 
-default['qmk']['ubuntu_pkgs'] = [
+default['qmk']['firmware']['ubuntu_pkgs'] = [
   'build-essential',
   'avr-libc',
   'binutils-arm-none-eabi',

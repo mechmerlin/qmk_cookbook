@@ -2,9 +2,24 @@
 
 This file is used to list changes made in each version of the qmk_cookbook cookbook.
 
+## [0.3.0] - 2019-05-31
+
+### Added
+- Introduce new resource called `qmk_repo` to assist in repo cloning. 
+- Added dependency on `chef-sugar`.
+- Added new attribute for install location.
+- Added new recipe for `qmk_configurator`.
+- Chef 15 license acceptance
+
+### Changed
+- Change some if-else statements to ternary statements. 
+
+### Removed
+- `directories` recipe removed and included in `firmware` recipe instead. 
+
 ## [0.2.1] - 2019-03-01
 
-## Fixed
+### Fixed
 - Change login user to `vagrant` to make it easier to create firmware files without logging into another user. 
 - Get rid of execute statement to run `qmk_install.sh` and just use `apt_package` resource. 
 
