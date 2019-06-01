@@ -20,15 +20,21 @@
 
 ## Recipes
 
-### Directories
+### Configurator
 
-Create user directories. 
+`git` clones the `qmk_configurator` repo. 
 
-**Usage:** `include_recipe 'qmk::directories'`
+**Usage:** `include_recipe 'qmk::configurator'`
+
+### Default
+
+default recipe that utilizes the `firmware` and `user` recipes. 
+
+**Usage:** `include_recipe 'qmk::default'`
 
 ### Firmware
 
-`git` clones the `qmk_firmare` repo.
+`git` clones the `qmk_firmware` repo.
 
 **Usage:** `include_recipe 'qmk::firmware'`
 
@@ -70,6 +76,6 @@ You may replace `default-ubuntu-1604` with your target.
 
 7. Run a `kitchen verify` command to check that all packages have been installed correctly.
 
-8. Run a `kitchen login` command to log into the `VM` and be sure to `ssh username@localhost`, in this case the username should be `vagrant`. The other option is to open up virtualbox and open up the newly created instance and run Ubuntu in a VM. 
+8. Run a `kitchen login` command to log into the `VM`. The other option is to open up virtualbox and open up the newly created instance and run Ubuntu in a VM. 
 
 
