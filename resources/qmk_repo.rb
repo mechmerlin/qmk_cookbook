@@ -7,7 +7,7 @@ property :install_dir, String
 
 action_class do
   def repo_name
-    new_resource.property_is_set?(:repo_name) ? new_resource.repo_name : ''
+    new_resource.property_is_set?(:repo_name) ? new_resource.repo_name : 'qmk_firmware'
   end
 
   def github_user
@@ -15,7 +15,7 @@ action_class do
   end
 
   def install_dir
-    new_resource.property_is_set?(:install_dir) ? new_resource.install_dir : ''
+    new_resource.property_is_set?(:install_dir) ? new_resource.install_dir : '~/'
   end
 end
 
@@ -28,7 +28,6 @@ action :create do
   end
 
   if repo_name.eql? 'qmk_firmware'
-
     apt_pkgs = node['qmk']['firmware']['ubuntu_pkgs']
 
     apt_pkgs.each do |package|
