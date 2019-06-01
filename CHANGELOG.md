@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the qmk_cookbook cookbook.
 
-## [0.3.0] - 2019-03-23
+## [0.3.0] - 2019-05-31
 
 ### Added
 - Introduce new resource called `qmk_repo` to assist in repo cloning. 
