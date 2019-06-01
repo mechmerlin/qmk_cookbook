@@ -1,18 +1,15 @@
-install_dir = node['qmk']['install_location']
 user = node['qmk']['admin_user']
 user_dir = mac_os_x? ? '/Users' : '/home'
 user_home = ::File.join(user_dir, user)
-install_location = ::File.join(user_home, install_dir)
+install_location = ::File.join user_home, 'Documents'
+qmk_dir = ::File.join install_location, 'qmk_firmware'
 
-qmk_repo 'download qmk_firmware' do
+directory install_location
+directory qmk_dir
+
+qmk_repo "clone qmk_firmware into #{install_location}" do
   github_user node['qmk']['github_user']
-  repo_name 'qmk'
-  install_dir install_location
+  repo_name 'qmk_firmware'
+  install_dir qmk_dir
   action :create
-end
-
-apt_pkgs = node['qmk']['firmware']['ubuntu_pkgs']
-
-apt_pkgs.each do |package|
-  apt_package package
 end
